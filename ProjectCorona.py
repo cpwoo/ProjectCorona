@@ -5,7 +5,7 @@ matplotlib.rcParams['font.size'] = 15
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 import pandas as pd
-df = pd.read_excel('코로나바이러스감염증-19_확진환자_발생현황_220319.xlsx', skiprows=[0,1,2,3,5])
+df = pd.read_excel('코로나바이러스감염증-19_확진환자_발생현황_220321.xlsx', skiprows=[0,1,2,3,5])
 df.replace('-', 0, inplace=True)
 
 df['누적확진'] = df['계(명)'].cumsum()
@@ -24,7 +24,7 @@ plt.show()
 x = df30['일자']; y = df30['계(명)']
 plt.title('대한민국 코로나19 일일확진자 최근 30일')
 plt.plot(x, y, color='k')
-plt.xticks(['2022-02-19', '2022-03-05', '2022-03-19'])
+plt.xticks(['2022-02-21', '2022-03-07', '2022-03-21'])
 plt.show()
 
 x = df['일자']; y = df['누적확진']
@@ -42,7 +42,7 @@ plt.show()
 x = df30['일자']; y = df30['발생률']
 plt.title('대한민국 코로나19 발생률 최근30일')
 plt.plot(x, y, color='k')
-plt.xticks(['2022-02-19', '2022-03-05', '2022-03-19'])
+plt.xticks(['2022-02-21', '2022-03-07', '2022-03-21'])
 plt.show()
 
 x = df['일자']; y = df['사망(명)']
@@ -54,7 +54,7 @@ plt.show()
 x = df30['일자']; y = df30['사망(명)']
 plt.title('대한민국 코로나19 일일사망자 최근 30일')
 plt.plot(x, y, color='k')
-plt.xticks(['2022-02-19', '2022-03-05', '2022-03-19'])
+plt.xticks(['2022-02-21', '2022-03-07', '2022-03-21'])
 plt.show()
 
 x = df['일자']; y = df['누적사망']
@@ -72,5 +72,5 @@ plt.show()
 x = df30['일자']; y = df30['치명률']
 plt.title('대한민국 코로나19 치명률 최근 30일')
 plt.plot(x, y, color='k')
-plt.xticks(['2022-02-19', '2022-03-05', '2022-03-19'])
+plt.xticks(['2022-02-21', '2022-03-07', '2022-03-21'])
 plt.show()
