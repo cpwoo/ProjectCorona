@@ -5,7 +5,7 @@ matplotlib.rcParams['font.size'] = 15
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 import pandas as pd
-df = pd.read_excel('코로나바이러스감염증-19_확진환자_발생현황_220324.xlsx', skiprows=[0,1,2,3,5])
+df = pd.read_excel('코로나바이러스감염증-19_확진환자_발생현황_220326.xlsx', skiprows=[0,1,2,3,5])
 df.drop(columns=['국내발생(명)', '해외유입(명)'], inplace=True)
 df.rename(columns={'계(명)':'일일확진자', '사망(명)':'일일사망자'}, inplace=True)
 df['일자'] = df['일자'].dt.strftime('%y.%m.%d')
